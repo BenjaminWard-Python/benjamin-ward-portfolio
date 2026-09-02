@@ -61,18 +61,16 @@ export default function Home() {
       <main id="main-content">
         <section className="hero wrap" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Technology · Security · Cincinnati</p>
+            <p className="eyebrow">Security - Strategy - Technology</p>
             <h1 id="hero-title">
               Technology leader.
               <br />
               Security strategist.
-              <br />
-              <em>Builder.</em>
             </h1>
             <p className="hero-intro">
-              I align resilient systems, strong teams, and pragmatic security
-              to move organizations forward—from enterprise IT operations to
-              community-first technology.
+              I like solving hard technology problems with good people. My work
+              covers IT, security, and the everyday systems that help an
+              organization run well.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#leadership">
@@ -89,8 +87,8 @@ export default function Home() {
             <div className="arch-summary">
               <p className="arch-kicker">Leadership at a glance</p>
               <p>
-                I lead across infrastructure, cybersecurity, governance, and
-                organizational growth—pairing enterprise scale with hands-on depth.
+                I work across infrastructure, security, and team leadership. I
+                enjoy making complicated systems easier to understand and use.
               </p>
             </div>
             <div className="arch-metrics" aria-label="Career impact">
@@ -106,13 +104,12 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">01 / Leadership</p>
-              <h2>Clarity at the intersection of people and systems.</h2>
+              <h2>Technology works better when people understand it.</h2>
             </div>
             <p className="section-lede">
-              My leadership practice pairs executive-level judgment with the
-              curiosity of a hands-on technologist. I build teams people trust,
-              security programs leaders understand, and technology strategies
-              that earn their investment.
+              I care about clear priorities, honest conversations, and giving
+              people what they need to do great work. I stay close to the
+              details without losing sight of the bigger picture.
             </p>
           </div>
 
@@ -141,10 +138,9 @@ export default function Home() {
                 <h2>A private AI workshop, built from the network up.</h2>
               </div>
               <p className="section-lede">
-                My lab is where infrastructure, security, software, and AI meet.
-                It gives me a place to test ideas at full depth—from packet flow
-                to user experience—before turning them into better decisions at
-                work.
+                My homelab is where I get to tinker. It lets me follow an idea
+                from the network and servers all the way to the software someone
+                actually uses.
               </p>
             </div>
 
@@ -197,8 +193,9 @@ export default function Home() {
                 </div>
               </div>
               <p className="flow-note">
-                Requests stay on a controlled path from trusted devices to local
-                inference, where each model has a distinct purpose and experience.
+                A request travels from a trusted device to local compute, then
+                goes to the model built for that job. It is a simple setup that
+                keeps each experience focused.
               </p>
             </div>
 
@@ -207,9 +204,10 @@ export default function Home() {
                 <p className="eyebrow">Open-source project</p>
                 <h3>Simple LMS</h3>
                 <p>
-                  A self-hosted SCORM learning platform for nonprofits that need
-                  defensible training records without enterprise per-seat costs
-                  or unnecessary complexity.
+                  I built Simple LMS for nonprofits that need to track required
+                  training without paying for a large enterprise platform. It is
+                  self-hosted, straightforward, and focused on the records an
+                  auditor actually needs.
                 </p>
                 <a
                   className="project-link"
@@ -240,10 +238,10 @@ export default function Home() {
             <div className="community-copy">
               <p className="stratit-name">StratIT Solutions</p>
               <p>
-                I founded StratIT Solutions to provide affordable IT and
-                cybersecurity support to local fire departments and nonprofits—organizations
-                often overlooked by large service providers, but
-                no less deserving of reliable, secure technology.
+                I started StratIT Solutions because fire departments and
+                nonprofits deserve dependable IT and security help, even when
+                they do not have a large budget. The goal is simple: give local
+                organizations practical support they can afford.
               </p>
               <ul>
                 <li>Managed IT and practical cybersecurity</li>
@@ -270,9 +268,9 @@ export default function Home() {
                 <h2>Always learning. Always raising the standard.</h2>
               </div>
               <p className="section-lede">
-                Formal study and industry credentials support the work—but the
-                real value is translating that knowledge into safer systems,
-                stronger teams, and sound executive decisions.
+                I genuinely enjoy learning. Each degree and certification gives
+                me another way to look at a problem, ask better questions, and
+                help a team make a sound decision.
               </p>
             </div>
 
@@ -293,7 +291,10 @@ export default function Home() {
                   <article>
                     <span>In progress</span>
                     <h3>MS, Computer Science</h3>
-                    <p>Artificial Intelligence &amp; Machine Learning</p>
+                    <p>
+                      Western Governors University · Artificial Intelligence &amp;
+                      Machine Learning
+                    </p>
                   </article>
                 </div>
               </div>
@@ -328,7 +329,8 @@ export default function Home() {
             <div className="contact-copy">
               <p>
                 If you&apos;d like to talk about technology, security, leadership,
-                or a problem worth solving, I&apos;d be glad to hear from you.
+                or an interesting problem, feel free to reach out. I&apos;m always
+                happy to have a good conversation.
               </p>
               <a className="button button-primary" href="mailto:benjamin@benjamin-ward.com">
                 Start a conversation <span aria-hidden="true">↗</span>

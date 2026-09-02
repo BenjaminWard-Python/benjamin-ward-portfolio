@@ -15,31 +15,31 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(baseUrl),
     title: "Benjamin Ward | Technology & Security Leader",
     description:
-      "Technology leader, security strategist, and builder leading resilient systems, strong teams, and pragmatic cybersecurity.",
+      "Benjamin Ward works across technology, security, leadership, and community-focused IT.",
     alternates: {
       canonical: "/",
     },
     openGraph: {
       title: "Benjamin Ward | Technology & Security Leader",
       description:
-        "Technology leader. Security strategist. Builder. Explore leadership impact, a private AI homelab, community work, and credentials.",
+        "Technology leader and security strategist. Explore leadership experience, a private AI homelab, community work, and credentials.",
       url: "/",
       siteName: "Benjamin Ward",
       type: "website",
       images: [
         {
-          url: "/og.png",
+          url: "/og-v2.png",
           width: 1731,
           height: 909,
-          alt: "Benjamin Ward — Technology leader. Security strategist. Builder.",
+          alt: "Benjamin Ward. Technology leader. Security strategist.",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: "Benjamin Ward | Technology & Security Leader",
-      description: "Technology leader. Security strategist. Builder.",
-      images: ["/og.png"],
+      description: "Technology leader. Security strategist.",
+      images: ["/og-v2.png"],
     },
     icons: {
       icon: "/favicon.png",

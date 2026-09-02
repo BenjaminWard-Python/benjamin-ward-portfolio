@@ -330,7 +330,7 @@ h1 em {
   position: relative;
   z-index: 1;
   max-width: 340px;
-  margin: 6.6rem auto 0;
+  margin: 5.6rem auto 0;
   text-align: center;
 }
 
@@ -1022,7 +1022,7 @@ h2 {
   }
 
   .arch-summary {
-    margin-top: 6.2rem;
+    margin-top: 5.6rem;
   }
 
   .project-details div {

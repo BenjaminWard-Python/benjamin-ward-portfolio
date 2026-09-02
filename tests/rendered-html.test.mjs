@@ -32,6 +32,7 @@ test("server-renders Benjamin Ward's portfolio", async () => {
   assert.match(html, /<title>Benjamin Ward \| Technology &amp; Security Leader<\/title>/i);
   assert.match(html, /Technology leader\./);
   assert.match(html, /Security strategist\./);
+  assert.doesNotMatch(html, /Builder\.|—/);
   assert.match(html, /Simple LMS/);
   assert.match(html, /StratIT Solutions/);
   assert.match(html, /CISSP.*In progress/s);
@@ -41,7 +42,7 @@ test("server-renders Benjamin Ward's portfolio", async () => {
 
 test("ships the portfolio's public assets and accessible structure", async () => {
   await Promise.all([
-    access(new URL("../public/og.png", import.meta.url)),
+    access(new URL("../public/og-v2.png", import.meta.url)),
     access(new URL("../public/favicon.png", import.meta.url)),
     access(new URL("../public/Benjamin-Ward-Resume-2026.pdf", import.meta.url)),
   ]);
@@ -56,7 +57,10 @@ test("ships the portfolio's public assets and accessible structure", async () =>
   assert.match(page, /className="skip-link"/);
   assert.match(page, /aria-label="Leadership impact summary"/);
   assert.match(page, /role="img"/);
-  assert.match(layout, /images: \["\/og\.png"\]/);
+  assert.match(page, /Security - Strategy - Technology/);
+  assert.match(page, /MS, Computer Science[\s\S]*Western Governors University/);
+  assert.doesNotMatch(page, /—/);
+  assert.match(layout, /images: \["\/og-v2\.png"\]/);
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
