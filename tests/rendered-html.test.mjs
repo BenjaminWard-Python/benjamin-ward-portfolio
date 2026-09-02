@@ -34,7 +34,7 @@ test("server-renders Benjamin Ward's portfolio", async () => {
   assert.match(html, /Security strategist\./);
   assert.match(html, /Simple LMS/);
   assert.match(html, /StratIT Solutions/);
-  assert.match(html, /CISSP · In progress/);
+  assert.match(html, /CISSP.*In progress/s);
   assert.match(html, /Benjamin-Ward-Resume-2026\.pdf/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
 });
@@ -54,7 +54,7 @@ test("ships the portfolio's public assets and accessible structure", async () =>
   ]);
 
   assert.match(page, /className="skip-link"/);
-  assert.match(page, /aria-label="Target leadership roles"/);
+  assert.match(page, /aria-label="Leadership impact summary"/);
   assert.match(page, /role="img"/);
   assert.match(layout, /images: \["\/og\.png"\]/);
   assert.match(css, /prefers-reduced-motion: reduce/);

@@ -84,37 +84,22 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="aspiration-card" aria-label="Target leadership roles">
+          <aside className="aspiration-card" aria-label="Leadership impact summary">
             <p className="location"><span aria-hidden="true" />Based in Cincinnati</p>
-            <div className="role-stack">
-              <span>Director of Information Technology</span>
-              <span>Director of Information Security</span>
-              <span>Director of Technology</span>
+            <div className="arch-summary">
+              <p className="arch-kicker">Leadership at a glance</p>
+              <p>
+                I lead across infrastructure, cybersecurity, governance, and
+                organizational growth—pairing enterprise scale with hands-on depth.
+              </p>
             </div>
-            <div className="availability">
-              <span>Ready for what&apos;s next</span>
-              <span>2026</span>
+            <div className="arch-metrics" aria-label="Career impact">
+              <div><strong>10+</strong><span>years in technology</span></div>
+              <div><strong>1,200</strong><span>employees supported</span></div>
+              <div><strong>$440K</strong><span>annual savings</span></div>
+              <div><strong>60%</strong><span>faster response</span></div>
             </div>
           </aside>
-        </section>
-
-        <section className="metrics wrap" aria-label="Career impact">
-          <div className="metric">
-            <strong>10+</strong>
-            <span>years in technology</span>
-          </div>
-          <div className="metric">
-            <strong>1,200</strong>
-            <span>employees supported</span>
-          </div>
-          <div className="metric">
-            <strong>$440K</strong>
-            <span>annual savings delivered</span>
-          </div>
-          <div className="metric">
-            <strong>60%</strong>
-            <span>faster incident response</span>
-          </div>
         </section>
 
         <section className="section wrap" id="leadership">
@@ -129,33 +114,6 @@ export default function Home() {
               security programs leaders understand, and technology strategies
               that earn their investment.
             </p>
-          </div>
-
-          <div className="leadership-grid">
-            <article className="lead-card lead-card-featured">
-              <span className="card-number">01</span>
-              <h3>Strategy that ships</h3>
-              <p>
-                Roadmaps, budgets, governance, and operating models that turn
-                business priorities into durable execution.
-              </p>
-            </article>
-            <article className="lead-card">
-              <span className="card-number">02</span>
-              <h3>Security made practical</h3>
-              <p>
-                Defense-in-depth, incident response, and compliance programs
-                shaped for real teams—not shelfware.
-              </p>
-            </article>
-            <article className="lead-card">
-              <span className="card-number">03</span>
-              <h3>Teams built to scale</h3>
-              <p>
-                Clear ownership, strong partnerships, and systems that help
-                talented people do their best work.
-              </p>
-            </article>
           </div>
 
           <div className="journey" aria-label="Recent leadership experience">
@@ -190,73 +148,58 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="lab-overview">
-              <div className="hardware-list" aria-label="Homelab hardware">
-                <div className="hardware-row">
-                  <span>Network core</span>
-                  <strong>UniFi Dream Machine Pro</strong>
-                </div>
-                <div className="hardware-row">
-                  <span>Switching</span>
-                  <strong>USW Pro HD 24 PoE</strong>
-                </div>
-                <div className="hardware-row">
-                  <span>Wireless</span>
-                  <strong>2× U7 Pro XG</strong>
-                </div>
-                <div className="hardware-row">
-                  <span>Compute</span>
-                  <strong>Threadripper 1950X · 128GB RAM</strong>
-                </div>
-                <div className="hardware-row">
-                  <span>Acceleration</span>
-                  <strong>RTX 3060 12GB · GTX 1660 Ti 6GB</strong>
-                </div>
-                <div className="hardware-row">
-                  <span>Storage</span>
-                  <strong>6TB</strong>
-                </div>
+            <div className="flow-panel">
+              <div className="flow-title">
+                <span>Infrastructure &amp; data flow</span>
+                <span className="local-badge">Local-first</span>
               </div>
-
-              <div className="flow-panel">
-                <div className="flow-title">
-                  <span>Current data flow</span>
-                  <span className="local-badge">Local-first</span>
-                </div>
-                <div
-                  className="network-flow"
-                  role="img"
-                  aria-label="Traffic moves from client devices through the UniFi gateway and switch to the private inference server, which routes requests to either a Dungeons and Dragons assistant or a general-purpose local model."
-                >
+              <div
+                className="architecture-flow"
+                role="img"
+                aria-label="Trusted devices send requests through a secured network edge and segmented core to local compute and storage. A private AI runtime then routes prompts to either a campaign assistant or a general-purpose assistant."
+              >
+                <div className="architecture-path">
                   <div className="flow-node">
-                    <small>01</small>
-                    <strong>Client</strong>
-                    <span>Prompt or request</span>
+                    <small>People</small>
+                    <strong>Trusted devices</strong>
+                    <span>Prompts · apps · administration</span>
                   </div>
                   <span className="flow-arrow" aria-hidden="true">→</span>
                   <div className="flow-node">
-                    <small>02</small>
-                    <strong>UniFi core</strong>
-                    <span>Gateway + switching</span>
+                    <small>Boundary</small>
+                    <strong>Secure network edge</strong>
+                    <span>Policy · routing · remote access</span>
+                  </div>
+                  <span className="flow-arrow" aria-hidden="true">→</span>
+                  <div className="flow-node">
+                    <small>Core</small>
+                    <strong>Segmented network</strong>
+                    <span>Managed wired + wireless paths</span>
                   </div>
                   <span className="flow-arrow" aria-hidden="true">→</span>
                   <div className="flow-node flow-node-emphasis">
-                    <small>03</small>
-                    <strong>AI server</strong>
-                    <span>Private inference</span>
+                    <small>Platform</small>
+                    <strong>Compute + storage</strong>
+                    <span>GPU acceleration · protected data</span>
+                  </div>
+                </div>
+                <div className="service-flow">
+                  <span className="branch-arrow" aria-hidden="true">↓</span>
+                  <div className="runtime-node">
+                    <small>Private AI runtime</small>
+                    <strong>Local model services</strong>
                   </div>
                   <span className="flow-arrow" aria-hidden="true">→</span>
                   <div className="model-stack">
-                    <div><strong>Campaign model</strong><span>D&amp;D worldbuilding</span></div>
-                    <div><strong>General model</strong><span>Daily AI assistant</span></div>
+                    <div><strong>Campaign assistant</strong><span>D&amp;D worldbuilding</span></div>
+                    <div><strong>General assistant</strong><span>Everyday AI tasks</span></div>
                   </div>
                 </div>
-                <p className="flow-note">
-                  Two purpose-built local LLM experiences share one carefully
-                  managed compute platform: one helps run an ongoing D&amp;D
-                  campaign; the other replaces costly general-purpose AI tools.
-                </p>
               </div>
+              <p className="flow-note">
+                Requests stay on a controlled path from trusted devices to local
+                inference, where each model has a distinct purpose and experience.
+              </p>
             </div>
 
             <article className="project-feature">
@@ -285,17 +228,6 @@ export default function Home() {
               </div>
             </article>
 
-            <div className="next-builds">
-              <div>
-                <p className="eyebrow">Next in the lab</p>
-                <h3>Experiments that deepen the leadership story.</h3>
-              </div>
-              <ol>
-                <li><span>01</span><p><strong>Unified observability</strong>Centralize infrastructure, application, and security telemetry with service-level dashboards.</p></li>
-                <li><span>02</span><p><strong>Zero-trust segmentation</strong>Document identity-aware access, VLAN boundaries, and tested recovery paths.</p></li>
-                <li><span>03</span><p><strong>Local AI operations</strong>Add model evaluation, usage visibility, retrieval, and repeatable deployment workflows.</p></li>
-              </ol>
-            </div>
           </div>
         </section>
 
@@ -309,8 +241,8 @@ export default function Home() {
               <p className="stratit-name">StratIT Solutions</p>
               <p>
                 I founded StratIT Solutions to provide affordable IT and
-                cybersecurity support to local fire departments and nonprofits—
-                organizations often overlooked by large service providers, but
+                cybersecurity support to local fire departments and nonprofits—organizations
+                often overlooked by large service providers, but
                 no less deserving of reliable, secure technology.
               </p>
               <ul>
@@ -344,42 +276,45 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="education-grid">
-              <article>
-                <span>Completed</span>
-                <h3>MS, Cybersecurity &amp; Information Assurance</h3>
-                <p>Western Governors University · 2025</p>
-              </article>
-              <article>
-                <span>Completed</span>
-                <h3>BS, Cybersecurity &amp; Information Assurance</h3>
-                <p>Western Governors University</p>
-              </article>
-              <article className="education-current">
-                <span>In progress</span>
-                <h3>MS, Computer Science</h3>
-                <p>Artificial Intelligence &amp; Machine Learning</p>
-              </article>
-            </div>
+            <div className="credentials-columns">
+              <div className="credential-column">
+                <p className="column-label">Education</p>
+                <div className="education-list">
+                  <article>
+                    <span>Completed · 2025</span>
+                    <h3>MS, Cybersecurity &amp; Information Assurance</h3>
+                    <p>Western Governors University</p>
+                  </article>
+                  <article>
+                    <span>Completed</span>
+                    <h3>BS, Cybersecurity &amp; Information Assurance</h3>
+                    <p>Western Governors University</p>
+                  </article>
+                  <article>
+                    <span>In progress</span>
+                    <h3>MS, Computer Science</h3>
+                    <p>Artificial Intelligence &amp; Machine Learning</p>
+                  </article>
+                </div>
+              </div>
 
-            <div className="certification-row">
-              <div>
-                <p className="eyebrow">Industry certifications</p>
+              <div className="credential-column certification-column">
+                <p className="column-label">Industry certifications</p>
                 <div className="cert-list">
                   {credentials.map((credential) => (
                     <span key={credential}>{credential}</span>
                   ))}
-                  <span className="cert-progress">CISSP · In progress</span>
+                  <span className="cert-progress">CISSP <small>In progress</small></span>
                 </div>
+                <a
+                  className="text-link dark-link"
+                  href="https://www.credly.com/users/benjamin-ward"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View verified credentials ↗
+                </a>
               </div>
-              <a
-                className="text-link dark-link"
-                href="https://www.credly.com/users/benjamin-ward"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View verified credentials ↗
-              </a>
             </div>
           </div>
         </section>
@@ -387,13 +322,13 @@ export default function Home() {
         <section className="contact-section" id="contact">
           <div className="wrap contact-grid">
             <div>
-              <p className="eyebrow">05 / What&apos;s next</p>
-              <h2>Let&apos;s build resilient technology—and the teams behind it.</h2>
+              <p className="eyebrow">05 / Reach out</p>
+              <h2>Good work starts with a thoughtful conversation.</h2>
             </div>
             <div className="contact-copy">
               <p>
-                I&apos;m exploring director-level opportunities across information
-                technology, information security, and technology leadership.
+                If you&apos;d like to talk about technology, security, leadership,
+                or a problem worth solving, I&apos;d be glad to hear from you.
               </p>
               <a className="button button-primary" href="mailto:benjamin@benjamin-ward.com">
                 Start a conversation <span aria-hidden="true">↗</span>
