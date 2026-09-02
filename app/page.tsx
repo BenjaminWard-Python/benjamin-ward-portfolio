@@ -77,9 +77,9 @@ export default function Home() {
             <div className="hero-copy">
               <p className="eyebrow">Security - Strategy - Technology</p>
               <p className="hero-intro">
-                I like solving hard technology problems with good people. My work
-                covers IT, security, and the everyday systems that help an
-                organization run well.
+                I enjoy solving complex technology problems with good people. My
+                work spans IT, security, and the systems organizations depend on
+                every day.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#leadership">

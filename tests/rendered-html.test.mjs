@@ -32,6 +32,8 @@ test("server-renders Benjamin Ward's portfolio", async () => {
   assert.match(html, /<title>Benjamin Ward \| Technology &amp; Security Leader<\/title>/i);
   assert.match(html, /Technology leader\./);
   assert.match(html, /Security strategist\./);
+  assert.match(html, /I enjoy solving complex technology problems with good people\./);
+  assert.doesNotMatch(html, /I like solving hard technology problems/);
   assert.doesNotMatch(html, /Builder\.|—/);
   assert.match(html, /Simple LMS/);
   assert.match(html, /StratIT Solutions/);
