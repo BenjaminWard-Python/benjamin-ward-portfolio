@@ -60,44 +60,54 @@ export default function Home() {
 
       <main id="main-content">
         <section className="hero wrap" id="top" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <p className="eyebrow">Security - Strategy - Technology</p>
-            <h1 id="hero-title">
-              Technology leader.
-              <br />
-              Security strategist.
+          <div className="hero-art-frame">
+            <img
+              className="hero-art"
+              src="/hero-banner.png"
+              alt=""
+              width="1731"
+              height="909"
+            />
+            <h1 className="visually-hidden" id="hero-title">
+              Benjamin Ward. Technology leader. Security strategist.
             </h1>
-            <p className="hero-intro">
-              I like solving hard technology problems with good people. My work
-              covers IT, security, and the everyday systems that help an
-              organization run well.
-            </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#leadership">
-                Explore my work <span aria-hidden="true">↘</span>
-              </a>
-              <a className="text-link" href="/Benjamin-Ward-Resume-2026.pdf">
-                View résumé
-              </a>
-            </div>
           </div>
 
-          <aside className="aspiration-card" aria-label="Leadership impact summary">
-            <p className="location"><span aria-hidden="true" />Based in Cincinnati</p>
-            <div className="arch-summary">
-              <p className="arch-kicker">Leadership at a glance</p>
-              <p>
-                I work across infrastructure, security, and team leadership. I
-                enjoy making complicated systems easier to understand and use.
+          <div className="hero-overview">
+            <div className="hero-copy">
+              <p className="eyebrow">Security - Strategy - Technology</p>
+              <p className="hero-intro">
+                I like solving hard technology problems with good people. My work
+                covers IT, security, and the everyday systems that help an
+                organization run well.
               </p>
+              <div className="hero-actions">
+                <a className="button button-primary" href="#leadership">
+                  Explore my work <span aria-hidden="true">↘</span>
+                </a>
+                <a className="text-link" href="/Benjamin-Ward-Resume-2026.pdf">
+                  View résumé
+                </a>
+              </div>
             </div>
-            <div className="arch-metrics" aria-label="Career impact">
-              <div><strong>10+</strong><span>years in technology</span></div>
-              <div><strong>1,200</strong><span>employees supported</span></div>
-              <div><strong>$440K</strong><span>annual savings</span></div>
-              <div><strong>60%</strong><span>faster response</span></div>
-            </div>
-          </aside>
+
+            <aside className="aspiration-card" aria-label="Leadership impact summary">
+              <p className="location"><span aria-hidden="true" />Based in Cincinnati</p>
+              <div className="arch-summary">
+                <p className="arch-kicker">Leadership at a glance</p>
+                <p>
+                  I work across infrastructure, security, and team leadership. I
+                  enjoy making complicated systems easier to understand and use.
+                </p>
+              </div>
+              <div className="arch-metrics" aria-label="Career impact">
+                <div><strong>10+</strong><span>years in technology</span></div>
+                <div><strong>1,200</strong><span>employees supported</span></div>
+                <div><strong>$440K</strong><span>annual savings</span></div>
+                <div><strong>60%</strong><span>faster response</span></div>
+              </div>
+            </aside>
+          </div>
         </section>
 
         <section className="section wrap" id="leadership">

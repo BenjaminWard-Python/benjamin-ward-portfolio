@@ -43,6 +43,7 @@ test("server-renders Benjamin Ward's portfolio", async () => {
 test("ships the portfolio's public assets and accessible structure", async () => {
   await Promise.all([
     access(new URL("../public/og-v2.png", import.meta.url)),
+    access(new URL("../public/hero-banner.png", import.meta.url)),
     access(new URL("../public/favicon.png", import.meta.url)),
     access(new URL("../public/Benjamin-Ward-Resume-2026.pdf", import.meta.url)),
   ]);
@@ -55,6 +56,8 @@ test("ships the portfolio's public assets and accessible structure", async () =>
   ]);
 
   assert.match(page, /className="skip-link"/);
+  assert.match(page, /className="hero-art"[\s\S]*src="\/hero-banner\.png"/);
+  assert.match(page, /className="visually-hidden"/);
   assert.match(page, /aria-label="Leadership impact summary"/);
   assert.match(page, /role="img"/);
   assert.match(page, /Security - Strategy - Technology/);

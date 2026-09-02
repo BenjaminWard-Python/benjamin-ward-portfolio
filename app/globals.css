@@ -67,6 +67,18 @@ a {
   transform: translateY(0);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-shell {
   position: relative;
   isolation: isolate;
@@ -180,12 +192,30 @@ a {
 }
 
 .hero {
+  padding-block: 28px 56px;
+}
+
+.hero-art-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 36px;
+  background: var(--ink-deep);
+  overflow: hidden;
+}
+
+.hero-art {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overview {
   display: grid;
-  min-height: 650px;
-  grid-template-columns: minmax(0, 1.25fr) minmax(330px, 0.75fr);
-  gap: 7vw;
-  align-items: center;
-  padding-block: 78px 65px;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(560px, 1.28fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 h1,
@@ -212,10 +242,21 @@ h1 em {
 
 .hero-intro {
   max-width: 680px;
-  margin: 2.1rem 0 2rem;
+  margin: 0 0 1.6rem;
   color: var(--paper-muted);
   font-size: 1.07rem;
-  line-height: 1.75;
+  line-height: 1.68;
+}
+
+.hero-copy {
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: rgba(20, 39, 31, 0.42);
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 0.9rem;
 }
 
 .hero-actions {
@@ -273,10 +314,14 @@ h1 em {
 
 .aspiration-card {
   position: relative;
-  min-height: 500px;
-  padding: 2.35rem;
+  display: grid;
+  grid-template-columns: minmax(210px, 0.78fr) minmax(320px, 1.22fr);
+  grid-template-rows: auto 1fr;
+  gap: 1rem 2rem;
+  align-items: center;
+  padding: 2rem;
   border: 1px solid var(--line);
-  border-radius: 180px 180px 36px 36px;
+  border-radius: 32px;
   background: linear-gradient(170deg, rgba(53, 91, 69, 0.32), rgba(10, 20, 16, 0.25));
   overflow: hidden;
 }
@@ -290,14 +335,14 @@ h1 em {
 }
 
 .aspiration-card::before {
-  top: -105px;
+  top: -175px;
   right: -58px;
   width: 290px;
   height: 290px;
 }
 
 .aspiration-card::after {
-  top: -68px;
+  top: -138px;
   right: -22px;
   width: 205px;
   height: 205px;
@@ -308,14 +353,14 @@ h1 em {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.6rem;
   margin: 0;
   color: var(--sage-bright);
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
 
 .location span {
@@ -330,8 +375,8 @@ h1 em {
   position: relative;
   z-index: 1;
   max-width: 340px;
-  margin: 5.6rem auto 0;
-  text-align: center;
+  margin: 0;
+  text-align: left;
 }
 
 .arch-summary > p:last-child {
@@ -352,10 +397,10 @@ h1 em {
 }
 
 .arch-metrics {
-  position: absolute;
-  right: 2.35rem;
-  bottom: 2.2rem;
-  left: 2.35rem;
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-top: 1px solid var(--line);
@@ -392,7 +437,7 @@ h1 em {
 }
 
 .section {
-  padding-block: 108px;
+  padding-block: 76px;
 }
 
 .section-heading {
@@ -400,7 +445,7 @@ h1 em {
   grid-template-columns: 1fr 1.6fr;
   gap: 7vw;
   align-items: end;
-  margin-bottom: 4rem;
+  margin-bottom: 2.75rem;
 }
 
 h2 {
@@ -624,7 +669,7 @@ h2 {
 .project-feature {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  margin-top: 5rem;
+  margin-top: 3rem;
   border: 1px solid rgba(22, 34, 27, 0.2);
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.12);
@@ -703,7 +748,7 @@ h2 {
 }
 
 .community-card > div {
-  padding: clamp(2rem, 5vw, 4.5rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
 }
 
 .community-copy {
@@ -848,7 +893,7 @@ h2 {
 }
 
 .contact-section {
-  padding-block: 120px;
+  padding-block: 82px;
 }
 
 .contact-grid {
@@ -900,9 +945,12 @@ h2 {
     display: none;
   }
 
-  .hero {
-    grid-template-columns: 1fr 0.65fr;
-    gap: 3rem;
+  .hero-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .aspiration-card {
+    grid-template-columns: minmax(210px, 0.75fr) minmax(360px, 1.25fr);
   }
 
   .service-flow {
@@ -928,20 +976,20 @@ h2 {
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    padding-block: 64px 56px;
+    padding-block: 20px 44px;
   }
 
-  h1 {
-    font-size: clamp(3.35rem, 15vw, 5.1rem);
+  .hero-art-frame {
+    border-radius: 24px;
   }
 
   .aspiration-card {
-    min-height: 500px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .section {
-    padding-block: 80px;
+    padding-block: 60px;
   }
 
   .section-heading,
@@ -952,6 +1000,15 @@ h2 {
   .credentials-columns {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .section-heading {
+    margin-bottom: 2.25rem;
+  }
+
+  .arch-metrics {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .journey-item {
@@ -997,7 +1054,7 @@ h2 {
   }
 
   .contact-section {
-    padding-block: 90px;
+    padding-block: 64px;
   }
 }
 
@@ -1011,18 +1068,15 @@ h2 {
     flex-direction: column;
   }
 
+  .hero-copy,
   .aspiration-card {
-    min-height: 500px;
     padding: 1.6rem;
   }
 
-  .arch-metrics {
-    right: 1.6rem;
-    left: 1.6rem;
-  }
-
-  .arch-summary {
-    margin-top: 5.6rem;
+  .hero-art {
+    min-height: 230px;
+    object-fit: cover;
+    object-position: left center;
   }
 
   .project-details div {
