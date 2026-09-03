@@ -211,11 +211,15 @@ a {
   object-position: center;
 }
 
-.hero-overview {
+.hero-overview-card {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(560px, 1.28fr);
-  gap: 1.5rem;
+  grid-template-columns: minmax(340px, 0.78fr) minmax(560px, 1.22fr);
   margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: linear-gradient(170deg, rgba(35, 72, 54, 0.35), rgba(10, 20, 16, 0.25));
+  overflow: hidden;
 }
 
 h1,
@@ -250,9 +254,6 @@ h1 em {
 
 .hero-copy {
   padding: 2rem;
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  background: rgba(20, 39, 31, 0.42);
 }
 
 .hero-copy .eyebrow {
@@ -312,36 +313,32 @@ h1 em {
   text-transform: uppercase;
 }
 
-.aspiration-card {
+.hero-leadership {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(210px, 0.78fr) minmax(320px, 1.22fr);
-  grid-template-rows: auto 1fr;
-  gap: 1rem 2rem;
+  grid-template-columns: minmax(300px, 1fr) 160px;
+  gap: 2rem;
   align-items: center;
   padding: 2rem;
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  background: linear-gradient(170deg, rgba(53, 91, 69, 0.32), rgba(10, 20, 16, 0.25));
-  overflow: hidden;
+  border-left: 1px solid var(--line);
 }
 
-.aspiration-card::before,
-.aspiration-card::after {
+.hero-leadership::before,
+.hero-leadership::after {
   content: "";
   position: absolute;
   border: 1px solid rgba(195, 216, 195, 0.12);
   border-radius: 50%;
 }
 
-.aspiration-card::before {
+.hero-leadership::before {
   top: -175px;
   right: -58px;
   width: 290px;
   height: 290px;
 }
 
-.aspiration-card::after {
+.hero-leadership::after {
   top: -138px;
   right: -22px;
   width: 205px;
@@ -363,6 +360,10 @@ h1 em {
   text-align: left;
 }
 
+.hero-leadership .location {
+  margin-bottom: 1.25rem;
+}
+
 .location span {
   width: 7px;
   height: 7px;
@@ -374,7 +375,7 @@ h1 em {
 .arch-summary {
   position: relative;
   z-index: 1;
-  max-width: 340px;
+  max-width: 480px;
   margin: 0;
   text-align: left;
 }
@@ -396,39 +397,27 @@ h1 em {
   text-transform: uppercase;
 }
 
-.arch-metrics {
+.tenure-metric {
   position: relative;
   z-index: 1;
-  grid-column: 2;
-  grid-row: 1 / span 2;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--line);
-}
-
-.arch-metrics > div {
-  padding: 0.8rem 0.65rem;
+  min-height: 150px;
+  align-content: center;
+  padding-left: 2rem;
+  border-left: 1px solid var(--line);
   text-align: center;
 }
 
-.arch-metrics > div:nth-child(even) {
-  border-left: 1px solid var(--line);
-}
-
-.arch-metrics > div:nth-child(n + 3) {
-  border-top: 1px solid var(--line);
-}
-
-.arch-metrics strong {
+.tenure-metric strong {
   display: block;
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.15;
 }
 
-.arch-metrics span {
+.tenure-metric span {
   display: block;
   margin-top: 0.2rem;
   color: var(--paper-muted);
@@ -485,7 +474,14 @@ h2 {
 }
 
 #leadership .section-heading {
+  display: block;
   margin-bottom: 2.15rem;
+}
+
+#leadership .section-heading h2 {
+  width: 100%;
+  font-size: clamp(2.4rem, 3.5vw, 3.5rem);
+  white-space: nowrap;
 }
 
 .journey-label {
@@ -970,12 +966,17 @@ h2 {
     display: none;
   }
 
-  .hero-overview {
+  .hero-overview-card {
     grid-template-columns: 1fr;
   }
 
-  .aspiration-card {
-    grid-template-columns: minmax(210px, 0.75fr) minmax(360px, 1.25fr);
+  .hero-leadership {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  #leadership .section-heading h2 {
+    white-space: normal;
   }
 
   .service-flow {
@@ -1008,11 +1009,6 @@ h2 {
     border-radius: 24px;
   }
 
-  .aspiration-card {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .section {
     padding-block: 60px;
   }
@@ -1036,11 +1032,6 @@ h2 {
   .section-heading {
     grid-template-columns: 1fr;
     margin-bottom: 2.25rem;
-  }
-
-  .arch-metrics {
-    grid-column: 1;
-    grid-row: auto;
   }
 
   .journey-item {
@@ -1101,8 +1092,21 @@ h2 {
   }
 
   .hero-copy,
-  .aspiration-card {
+  .hero-leadership {
     padding: 1.6rem;
+  }
+
+  .hero-leadership {
+    grid-template-columns: 1fr;
+  }
+
+  .tenure-metric {
+    min-height: auto;
+    justify-items: start;
+    padding: 1.25rem 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    text-align: left;
   }
 
   .hero-art {

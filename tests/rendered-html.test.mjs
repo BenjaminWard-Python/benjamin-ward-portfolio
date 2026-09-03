@@ -34,6 +34,8 @@ test("server-renders Benjamin Ward's portfolio", async () => {
   assert.match(html, /Security strategist\./);
   assert.match(html, /I enjoy solving complex technology problems with good people\./);
   assert.doesNotMatch(html, /I like solving hard technology problems/);
+  assert.doesNotMatch(html, /employees supported|annual savings|faster response/);
+  assert.doesNotMatch(html, /I care about clear priorities/);
   assert.doesNotMatch(html, /Builder\.|—/);
   assert.match(html, /Simple LMS/);
   assert.match(html, /StratIT Solutions/);
@@ -60,7 +62,8 @@ test("ships the portfolio's public assets and accessible structure", async () =>
   assert.match(page, /className="skip-link"/);
   assert.match(page, /className="hero-art"[\s\S]*src="\/hero-banner\.png"/);
   assert.match(page, /className="visually-hidden"/);
-  assert.match(page, /aria-label="Leadership impact summary"/);
+  assert.match(page, /className="hero-overview-card"/);
+  assert.match(page, /aria-label="Introduction and leadership overview"/);
   assert.match(page, /role="img"/);
   assert.match(page, /Security - Strategy - Technology/);
   assert.match(page, /MS, Computer Science[\s\S]*Western Governors University/);

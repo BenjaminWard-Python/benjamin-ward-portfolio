@@ -73,7 +73,10 @@ export default function Home() {
             </h1>
           </div>
 
-          <div className="hero-overview">
+          <div
+            className="hero-overview-card"
+            aria-label="Introduction and leadership overview"
+          >
             <div className="hero-copy">
               <p className="eyebrow">Security - Strategy - Technology</p>
               <p className="hero-intro">
@@ -91,36 +94,31 @@ export default function Home() {
               </div>
             </div>
 
-            <aside className="aspiration-card" aria-label="Leadership impact summary">
-              <p className="location"><span aria-hidden="true" />Based in Cincinnati</p>
-              <div className="arch-summary">
-                <p className="arch-kicker">Leadership at a glance</p>
-                <p>
-                  I work across infrastructure, security, and team leadership. I
-                  enjoy making complicated systems easier to understand and use.
-                </p>
+            <div className="hero-leadership">
+              <div>
+                <p className="location"><span aria-hidden="true" />Based in Cincinnati</p>
+                <div className="arch-summary">
+                  <p className="arch-kicker">Leadership at a glance</p>
+                  <p>
+                    I work across infrastructure, security, and team leadership. I
+                    enjoy making complicated systems easier to understand and use.
+                  </p>
+                </div>
               </div>
-              <div className="arch-metrics" aria-label="Career impact">
-                <div><strong>10+</strong><span>years in technology</span></div>
-                <div><strong>1,200</strong><span>employees supported</span></div>
-                <div><strong>$440K</strong><span>annual savings</span></div>
-                <div><strong>60%</strong><span>faster response</span></div>
+              <div className="tenure-metric" aria-label="More than 10 years in technology">
+                <strong>10+</strong>
+                <span>years in technology</span>
               </div>
-            </aside>
+            </div>
           </div>
         </section>
 
         <section className="section wrap" id="leadership">
-          <div className="section-heading">
+          <div className="section-heading leadership-heading">
             <div>
               <p className="eyebrow">01 / Leadership</p>
               <h2>Technology works better when people understand it.</h2>
             </div>
-            <p className="section-lede">
-              I care about clear priorities, honest conversations, and giving
-              people what they need to do great work. I stay close to the
-              details without losing sight of the bigger picture.
-            </p>
           </div>
 
           <div className="journey" aria-label="Recent leadership experience">
