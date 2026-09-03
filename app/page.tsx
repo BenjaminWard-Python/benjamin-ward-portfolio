@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const roles = [
   {
     company: "Divisions Maintenance Group",
@@ -60,12 +62,14 @@ export default function Home() {
       <main id="main-content">
         <section className="hero wrap" id="top" aria-labelledby="hero-title">
           <div className="hero-art-frame">
-            <img
+            <Image
               className="hero-art"
               src="/hero-banner.png"
               alt=""
               width="1731"
               height="909"
+              priority
+              unoptimized
             />
             <h1 className="visually-hidden" id="hero-title">
               Benjamin Ward. Technology leader. Security strategist.

@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const headerList = await headers();
-  const host =
-    headerList.get("x-forwarded-host") ??
-    headerList.get("host") ??
-    "benjamin-ward.com";
-  const protocol = headerList.get("x-forwarded-proto") ?? (host.includes("localhost") ? "http" : "https");
-  const baseUrl = `${protocol}://${host}`;
-
-  return {
-    metadataBase: new URL(baseUrl),
+export const metadata: Metadata = {
+    metadataBase: new URL("https://benjamin-ward.com"),
     title: "Benjamin Ward | Technology & Security Leader",
     description:
       "Benjamin Ward works across technology, security, leadership, and community-focused IT.",
@@ -44,8 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: {
       icon: "/favicon.png",
     },
-  };
-}
+};
 
 export default function RootLayout({
   children,
