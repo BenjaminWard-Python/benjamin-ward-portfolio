@@ -152,60 +152,125 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flow-panel">
-              <div className="flow-title">
-                <span>Infrastructure &amp; data flow</span>
-                <span className="local-badge">Local-first</span>
-              </div>
-              <div
-                className="architecture-flow"
-                role="img"
-                aria-label="Trusted devices send requests through a secured network edge and segmented core to local compute and storage. A private AI runtime then routes prompts to either a campaign assistant or a general-purpose assistant."
-              >
-                <div className="architecture-path">
-                  <div className="flow-node">
-                    <small>People</small>
-                    <strong>Trusted devices</strong>
-                    <span>Prompts · apps · administration</span>
-                  </div>
-                  <span className="flow-arrow" aria-hidden="true">→</span>
-                  <div className="flow-node">
-                    <small>Boundary</small>
-                    <strong>Secure network edge</strong>
-                    <span>Policy · routing · remote access</span>
-                  </div>
-                  <span className="flow-arrow" aria-hidden="true">→</span>
-                  <div className="flow-node">
-                    <small>Core</small>
-                    <strong>Segmented network</strong>
-                    <span>Managed wired + wireless paths</span>
-                  </div>
-                  <span className="flow-arrow" aria-hidden="true">→</span>
-                  <div className="flow-node flow-node-emphasis">
-                    <small>Platform</small>
-                    <strong>Compute + storage</strong>
-                    <span>GPU acceleration · protected data</span>
+            <figure className="lab-map">
+              <div className="lab-map-header">
+                <div className="lab-map-title">
+                  <span className="lab-map-mark" aria-hidden="true">BW</span>
+                  <div>
+                    <p>Benjamin&apos;s homelab</p>
+                    <h3>Private AI systems map</h3>
                   </div>
                 </div>
-                <div className="service-flow">
-                  <span className="branch-arrow" aria-hidden="true">↓</span>
-                  <div className="runtime-node">
-                    <small>Private AI runtime</small>
-                    <strong>Local model services</strong>
-                  </div>
-                  <span className="flow-arrow" aria-hidden="true">→</span>
-                  <div className="model-stack">
-                    <div><strong>Campaign assistant</strong><span>D&amp;D worldbuilding</span></div>
-                    <div><strong>General assistant</strong><span>Everyday AI tasks</span></div>
-                  </div>
+                <div className="lab-map-status">
+                  <span aria-hidden="true" />
+                  Local-first architecture
                 </div>
               </div>
-              <p className="flow-note">
-                A request travels from a trusted device to local compute, then
-                goes to the model built for that job. It is a simple setup that
-                keeps each experience focused.
-              </p>
-            </div>
+
+              <div className="lab-map-body">
+                <aside className="lab-foundation" aria-label="Architecture principles">
+                  <p className="map-label">Foundation</p>
+                  <div className="foundation-list">
+                    <div className="foundation-item">
+                      <span className="map-icon" aria-hidden="true">01</span>
+                      <div><strong>Secure edge</strong><small>Policy · routing · remote access</small></div>
+                    </div>
+                    <div className="foundation-item">
+                      <span className="map-icon" aria-hidden="true">02</span>
+                      <div><strong>Segmented core</strong><small>Purpose-built network paths</small></div>
+                    </div>
+                    <div className="foundation-item">
+                      <span className="map-icon" aria-hidden="true">03</span>
+                      <div><strong>Protected data</strong><small>Local storage · controlled access</small></div>
+                    </div>
+                  </div>
+                  <div className="foundation-note">
+                    <span aria-hidden="true">↳</span>
+                    <p><strong>Design intent</strong>Keep services close, boundaries clear, and each experience focused.</p>
+                  </div>
+                </aside>
+
+                <div className="lab-topology">
+                  <section className="topology-zone access-zone" aria-labelledby="access-zone-title">
+                    <div className="zone-heading">
+                      <div>
+                        <span className="zone-number">01</span>
+                        <h4 id="access-zone-title">Access layer</h4>
+                      </div>
+                      <span className="zone-tag">Trusted</span>
+                    </div>
+                    <div className="access-path">
+                      <div className="system-card compact-card">
+                        <span className="system-glyph" aria-hidden="true">TD</span>
+                        <div><strong>Trusted devices</strong><small>Prompts · apps · administration</small></div>
+                      </div>
+                      <span className="path-arrow" aria-hidden="true">→</span>
+                      <div className="system-card compact-card">
+                        <span className="system-glyph" aria-hidden="true">SE</span>
+                        <div><strong>Secure network edge</strong><small>Identity · policy · encrypted access</small></div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section className="topology-zone platform-zone" aria-labelledby="platform-zone-title">
+                    <div className="zone-heading">
+                      <div>
+                        <span className="zone-number">02</span>
+                        <h4 id="platform-zone-title">Core platform</h4>
+                      </div>
+                      <span className="zone-tag">Isolated</span>
+                    </div>
+                    <div className="platform-grid">
+                      <div className="system-card">
+                        <span className="system-glyph" aria-hidden="true">NW</span>
+                        <div><strong>Segmented network</strong><small>Managed wired + wireless paths</small></div>
+                      </div>
+                      <div className="system-card featured-card">
+                        <span className="system-glyph" aria-hidden="true">GPU</span>
+                        <div><strong>Accelerated compute</strong><small>Local inference · flexible workloads</small></div>
+                      </div>
+                      <div className="system-card">
+                        <span className="system-glyph" aria-hidden="true">DB</span>
+                        <div><strong>Protected storage</strong><small>Models · application data · backups</small></div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section className="topology-zone services-zone" aria-labelledby="services-zone-title">
+                    <div className="zone-heading">
+                      <div>
+                        <span className="zone-number">03</span>
+                        <h4 id="services-zone-title">Private AI services</h4>
+                      </div>
+                      <span className="zone-tag">Local</span>
+                    </div>
+                    <div className="services-path">
+                      <div className="runtime-hub">
+                        <span className="system-glyph" aria-hidden="true">AI</span>
+                        <div><small>Private AI runtime</small><strong>Local model services</strong></div>
+                      </div>
+                      <span className="split-line" aria-hidden="true" />
+                      <div className="assistant-grid">
+                        <div className="assistant-card">
+                          <span className="assistant-index">A</span>
+                          <div><strong>Campaign assistant</strong><small>D&amp;D worldbuilding</small></div>
+                        </div>
+                        <div className="assistant-card">
+                          <span className="assistant-index">B</span>
+                          <div><strong>General assistant</strong><small>Everyday AI tasks</small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <figcaption className="lab-map-footer">
+                <div><span>01</span> Request enters from a trusted device</div>
+                <div><span>02</span> Work stays inside segmented infrastructure</div>
+                <div><span>03</span> The runtime selects the purpose-built assistant</div>
+              </figcaption>
+            </figure>
 
             <article className="project-feature">
               <div className="project-intro">
