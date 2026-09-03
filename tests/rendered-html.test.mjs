@@ -37,7 +37,8 @@ test("server-renders Benjamin Ward's portfolio", async () => {
   assert.doesNotMatch(html, /employees supported|annual savings|faster response/);
   assert.doesNotMatch(html, /I care about clear priorities/);
   assert.doesNotMatch(html, /Builder\.|—/);
-  assert.match(html, /Simple LMS/);
+  assert.match(html, /13\+/);
+  assert.doesNotMatch(html, /10\+|Simple LMS|02 \/ Homelab/);
   assert.match(html, /StratIT Solutions/);
   assert.match(html, /CISSP.*In progress/s);
   assert.match(html, /Benjamin-Ward-Resume-2026\.pdf/);
@@ -64,7 +65,7 @@ test("ships the portfolio's public assets and accessible structure", async () =>
   assert.match(page, /className="visually-hidden"/);
   assert.match(page, /className="hero-overview-card"/);
   assert.match(page, /aria-label="Introduction and leadership overview"/);
-  assert.match(page, /role="img"/);
+  assert.doesNotMatch(page, /href="#homelab"|className="lab-section"/);
   assert.match(page, /Security - Strategy - Technology/);
   assert.match(page, /MS, Computer Science[\s\S]*Western Governors University/);
   assert.doesNotMatch(page, /—/);

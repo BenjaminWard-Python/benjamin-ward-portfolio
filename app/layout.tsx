@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "Benjamin Ward | Technology & Security Leader",
       description:
-        "Technology leader and security strategist. Explore leadership experience, a private AI homelab, community work, and credentials.",
+        "Technology leader and security strategist. Explore leadership experience, community work, and credentials.",
       url: "/",
       siteName: "Benjamin Ward",
       type: "website",
