@@ -3,7 +3,7 @@ import Image from "next/image";
 const roles = [
   {
     company: "Divisions Maintenance Group",
-    title: "Senior Manager of Infrastructure & Security",
+    title: "Head of Information Security",
     dates: "2025 - Present",
   },
   {
@@ -193,14 +193,6 @@ export default function Home() {
                     <span>Completed</span>
                     <h3>BS, Cybersecurity &amp; Information Assurance</h3>
                     <p>Western Governors University</p>
-                  </article>
-                  <article>
-                    <span>In progress</span>
-                    <h3>MS, Computer Science</h3>
-                    <p>
-                      Western Governors University · Artificial Intelligence &amp;
-                      Machine Learning
-                    </p>
                   </article>
                 </div>
               </div>
